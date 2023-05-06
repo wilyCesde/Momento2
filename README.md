@@ -11,7 +11,7 @@ Momento 2 Python! ⌨️
 ## ¿Cómo se ejecutá?
 - Se configura el entorno de programación
 - Se instalan las respectivas dependencias 
-- 
+- Se corre el programa de cada uno de los ejercicios
 
 ## Ejercicio Cócteles 🍸
 Se Desarrolla aplicativo tipo web, utilizando el lenguaje de programación Python para administrar la información de
