@@ -9,7 +9,9 @@ Momento 2 Python! ⌨️
 - Ejercicio Escudería
 
 ## ¿Cómo se ejecutá?
-
+- Se configura el entorno de programación
+- Se instalan las respectivas dependencias 
+- 
 
 ## Ejercicio Cócteles 🍸
 Se Desarrolla aplicativo tipo web, utilizando el lenguaje de programación Python para administrar la información de
