@@ -8,6 +8,9 @@ Momento 2 Python! ⌨️
 - Ejercicio de Cócteles
 - Ejercicio Escudería
 
+## ¿Cómo se ejecutá?
+
+
 ## Ejercicio Cócteles 🍸
 Se Desarrolla aplicativo tipo web, utilizando el lenguaje de programación Python para administrar la información de
 los mejores cócteles de un bar.
