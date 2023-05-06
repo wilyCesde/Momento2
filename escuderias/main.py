@@ -1,38 +1,39 @@
 from Escuderia import Escuderia
 
-escuderias=[]
+escuderias = []
+contador = 1
 
-contador=1
+numeroEscuderias = int(input('Digite el número de escuderías: '))
 
-numeroEscuderias=int(input('digite el numero de escuderias: '))
+while contador <= numeroEscuderias:
+    print(f'ESCUDERÍA #{contador}')
+    escuderia = Escuderia()
 
-while contador <=  numeroEscuderias:
-   contador = contador + 1
-   escuderia = Escuderia()
+    escuderia.nombre = input('Digite el nombre de la escudería: ')
+    escuderia.casaMotor = input('Digite el nombre de la casa motor: ')
 
-   print(f'OTRA ESCUDERIA')
-   escuderia.nombre=input("digite nombre de la escuderia: ")
-   escuderia.casaMotor=input("digite nombre de la  casa Motor: ")
-   escuderia.pilotoPrincipal.nombre=input("digite nombre del primer piloto: ")
-   escuderia.pilotoPrincipal.salarioAnual=input(f"digite el salario de {escuderia.pilotoPrincipal.nombre}: ")
-   escuderia.pilotoPrincipal.fechaNacimiento=input(f"digita la fecha de nacimiento de {escuderia.pilotoPrincipal.nombre}: ")
-   escuderia.pilotoPrincipal.pais=input(f"digite el pais de {escuderia.pilotoPrincipal.nombre}: ")
-   escuderia.piloto2.nombre=input("digite nombre del segundo piloto: ")
-   escuderia.piloto2.salarioAnual=input(f"digite salario de {escuderia.piloto2.nombre}:")
-   escuderia.piloto2.fechaNacimiento=input(f"digite fecha de nacimiento de {escuderia.piloto2.nombre}:")
-   escuderia.piloto2.pais=input(f"digite pais de {escuderia.piloto2.nombre}:")
-   escuderia.costos=int(input(f"digite valor de los costos de {escuderia.nombre}:"))
-   
-   escuderias.append(escuderia)
-   
-#RECORRIENDO LA LISTA DE ESCUDERIA
-for escuderia in escuderias:   
-   costoMayor = escuderia.costo
-   nombreEscuderiaMasCara = None
-   
-   if escuderia.costos > costoMayor:
-      costoMayor=escuderia.costos
-      nombreEscuderiaMasCara=escuderia.nombre
+    escuderia.pilotoPrincipal.nombre = input('Digite el nombre del primer piloto: ')
+    escuderia.pilotoPrincipal.salarioAnual = int(input(f'Digite el salario de {escuderia.pilotoPrincipal.nombre}: '))
+    escuderia.pilotoPrincipal.fechaNacimiento = input(f'Digite la fecha de nacimiento de {escuderia.pilotoPrincipal.nombre}: ')
+    escuderia.pilotoPrincipal.pais = input(f'Digite el país de {escuderia.pilotoPrincipal.nombre}: ')
 
-      print(f'La escuderia {escuderia.nombre} tiene costos mas elevados: {escuderia.costos}')
+    escuderia.piloto2.nombre = input('Digite el nombre del segundo piloto: ')
+    escuderia.piloto2.salarioAnual = int(input(f'Digite el salario de {escuderia.piloto2.nombre}: '))
+    escuderia.piloto2.fechaNacimiento = input(f'Digite la fecha de nacimiento de {escuderia.piloto2.nombre}: ')
+    escuderia.piloto2.pais = input(f'Digite el país de {escuderia.piloto2.nombre}: ')
 
+    escuderia.costos = int(input(f'Digite el valor de los costos de {escuderia.nombre}: '))
+
+    escuderias.append(escuderia)
+    contador += 1
+
+
+costoMayor = 0
+nombreEscuderiaMasCara = None
+
+for escuderia in escuderias:
+    if escuderia.costos > costoMayor:
+        costoMayor = escuderia.costos
+        nombreEscuderiaMasCara = escuderia.nombre
+
+print(f'La escudería más cara es {nombreEscuderiaMasCara} con un costo anual de {costoMayor}')
